@@ -1,0 +1,28 @@
+package com.example.demo.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.services.ServiceRequestService;
+
+@RestController
+@RequestMapping("/api/service-requests")
+public class ServiceRequestController
+{
+	  @PostMapping
+	    public ServiceRequest submitRequest(@RequestBody ServiceRequest request) {
+	        return serviceRequestService.submitRequest(request);
+	    }
+	 @Autowired
+	    private ServiceRequestService serviceRequestService;
+	 @GetMapping("/{id}")
+	    public ServiceRequest getRequestById(@PathVariable Long id) {
+	        return serviceRequestService.getRequestById(id);
+	    }
+	 @GetMapping
+	    public List<ServiceRequest> getAllRequests() {
+	        return serviceRequestService.getAllRequests();
+	    }
+
+}

@@ -1,0 +1,33 @@
+package com.example.demo.services;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Match;
+@Service
+public class MatchServiceImpl implements MatchService {
+
+	@Autowired
+	private MatchRepo matchRepo;
+	@Override
+	public List<Match> getAllMatches() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Match> getLiveMatches() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Map<String, String>> getPointTable() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

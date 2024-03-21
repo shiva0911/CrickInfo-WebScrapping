@@ -1,0 +1,32 @@
+package com.example.demo.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.demo.Repository.ServiceRequestRepository;
+import com.example.demo.entity.ServiceRequest;
+
+public class ServiceRequestServiceImpl implements ServiceRequestService {
+
+	 @Autowired
+	    private ServiceRequestRepository serviceRequestRepository;
+	@Override
+	public ServiceRequest submitRequest(ServiceRequest request) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ServiceRequest getRequestById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ServiceRequest> getAllRequests() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

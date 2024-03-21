@@ -1,0 +1,11 @@
+package com.example.demo.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.entity.Match;
+
+public interface MatchRepo extends JpaRepository<Match, Integer>
+{
+	Optional<Match> List<Match> findByTeamheading(String teamheading);
+
+}
